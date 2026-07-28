@@ -1,0 +1,146 @@
+/* 1. Global Reset & Typography */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121214;
+    color: #e2e8f0;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0 20px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 2. Cleaner Section Dividers */
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #2d3748;
+    margin: 40px 0;
+}
+
+/* 3. Header & Navigation */
+header {
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+header h1 {
+    color: #6366f1; /* Indigo accents */
+    margin-bottom: 5px;
+    font-size: 2.2rem;
+}
+
+header p em {
+    color: #94a3b8;
+    font-style: normal;
+}
+
+nav p {
+    background-color: #1e1e24;
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: 1px solid #2d3748;
+}
+
+nav a {
+    color: #38bdf8; /* Light blue link color */
+    text-decoration: none;
+    font-weight: 600;
+    margin: 0 10px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: #6366f1;
+}
+
+/* 4. Semantic Sections & Tables */
+blockquote {
+    border-left: 4px solid #6366f1;
+    background-color: #1e1e24;
+    margin: 20px 0;
+    padding: 15px 20px;
+    border-radius: 0 8px 8px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* Merges cell borders cleanly */
+    background-color: #1e1e24;
+    overflow: hidden;
+    border-radius: 8px;
+    border: 1px solid #2d3748 !important; /* Overrides HTML border attribute */
+}
+
+th, td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid #2d3748;
+}
+
+th {
+    background-color: #252529;
+    color: #6366f1;
+}
+
+/* 5. Interactive Details & Inputs */
+details {
+    background-color: #1e1e24;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #2d3748;
+}
+
+summary {
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: #e2e8f0;
+}
+
+summary:hover {
+    color: #38bdf8;
+}
+
+fieldset {
+    border: 1px solid #2d3748;
+    border-radius: 8px;
+    padding: 25px;
+    background-color: #1e1e24;
+}
+
+legend {
+    color: #6366f1;
+    padding: 0 10px;
+}
+
+input[type="text"], select, textarea {
+    width: 100%;
+    padding: 10px;
+    background-color: #121214;
+    border: 1px solid #2d3748;
+    color: #e2e8f0;
+    border-radius: 6px;
+    box-sizing: border-box; /* Ensures padding doesn't cause overflow */
+    margin-top: 5px;
+}
+
+input[type="submit"], input[type="reset"] {
+    background-color: #6366f1;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+input[type="reset"] {
+    background-color: #475569;
+}
+
+input[type="submit"]:hover {
+    background-color: #4f46e5;
+}
