@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Styled Webpage</title>
+    <style>
+        /* ---------- CSS Syntax & Selectors ---------- */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            color: #333333;
+        }
+
+        /* ---------- Header with Gradient Background & Text Shadow ---------- */
+        header {
+            background: linear-gradient(to right, #4a90e2, #50c9c3);
+            color: white;
+            text-align: center;
+            padding: 30px 10px;
+            text-shadow: 1px 1px 2px black;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.2rem;
+            font-family: Arial, sans-serif;
+        }
+
+        header p {
+            margin-top: 8px;
+            font-size: 1rem;
+        }
+
+        /* ---------- Navigation Bar ---------- */
+        nav {
+            background-color: #333333;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 5px 10px;
+        }
+
+        /* Hover effect for navigation links */
+        nav ul li a:hover {
+            background-color: #4a90e2;
+            color: yellow;
+        }
+
+        /* ---------- Canvas Section ---------- */
+        .canvas-section {
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .canvas-section h2 {
+            font-family: Arial, sans-serif;
+            color: #333333;
+        }
+
+        canvas {
+            background-color: #ffffff;
+            border: 2px solid #333333;
+            box-shadow: 5px 5px 5px #999999;
+        }
+
+        /* ---------- Content Cards Section ---------- */
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            padding: 20px 20px 40px;
+        }
+
+        .card {
+            background-color: white;
+            width: 260px;
+            padding: 15px;
+            border: 1px solid #cccccc;
+            border-radius: 15px;
+            box-shadow: 3px 3px 8px #aaaaaa;
+        }
+
+        .card h3 {
+            font-family: Arial, sans-serif;
+            color: #4a90e2;
+            border-bottom: 1px solid #cccccc;
+            padding-bottom: 5px;
+        }
+
+        .card p {
+            font-size: 0.9rem;
+            line-height: 1.5;
+            color: #555555;
+        }
+
+        .card button {
+            margin-top: 10px;
+            padding: 8px 15px;
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+
+        /* Hover effect for buttons */
+        .card button:hover {
+            background-color: #357ab8;
+        }
+
+        /* ---------- Footer ---------- */
+        footer {
+            background-color: #333333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>My Styled Webpage</h1>
+        <p>Observation Task 2 &mdash; HTML5 Graphics and CSS3 Web Styling</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#canvas">Canvas</a></li>
+            <li><a href="#cards">Cards</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="canvas-section" id="canvas">
+        <h2>HTML5 Canvas Drawing</h2>
+        <canvas id="myCanvas" width="500" height="300"></canvas>
+    </section>
+
+    <section class="cards" id="cards">
+        <div class="card">
+            <h3>Card One</h3>
+            <p>This card demonstrates borders, padding, margin, and a soft box shadow using CSS3.</p>
+            <button>Learn More</button>
+        </div>
+        <div class="card">
+            <h3>Card Two</h3>
+            <p>Hover over this card to see a smooth lift effect powered by CSS3 transitions.</p>
+            <button>Learn More</button>
+        </div>
+        <div class="card">
+            <h3>Card Three</h3>
+            <p>Rounded corners and layered shadows give this card a clean, modern appearance.</p>
+            <button>Learn More</button>
+        </div>
+    </section>
+
+    <footer id="about">
+        <p>&copy; 2026 My Styled Webpage | Created for Observation Task 2</p>
+    </footer>
+
+    <!-- ---------- Part A: HTML5 Canvas Script ---------- -->
+    <script>
+        const canvas = document.getElementById('myCanvas');
+        const ctx = canvas.getContext('2d');
+
+        // 1. Rectangle
+        ctx.fillStyle = '#3a5fa0';
+        ctx.fillRect(30, 30, 150, 90);
+        ctx.strokeStyle = '#1b2a4a';
+        ctx.lineWidth = 3;
+        ctx.strokeRect(30, 30, 150, 90);
+
+        // 2. Circle
+        ctx.beginPath();
+        ctx.arc(320, 75, 60, 0, Math.PI * 2);
+        ctx.fillStyle = '#e0862c';
+        ctx.fill();
+        ctx.strokeStyle = '#1b2a4a';
+        ctx.lineWidth = 3;
+        ctx.stroke();
+
+        // 3. Line
+        ctx.beginPath();
+        ctx.moveTo(30, 180);
+        ctx.lineTo(470, 180);
+        ctx.strokeStyle = '#1b2a4a';
+        ctx.lineWidth = 4;
+        ctx.stroke();
+
+        // 4. Name text
+        ctx.font = "bold 28px Georgia, serif";
+        ctx.fillStyle = '#1b2a4a';
+        ctx.textAlign = 'center';
+        ctx.fillText('V S Sravan', canvas.width / 2, 240);
+    </script>
+</body>
+
+</html>
